@@ -1,0 +1,172 @@
+<div class="w-full h-[60px] flex bg-[#F8FAFC]">
+    <!-- toolbar -->
+    <span class="w-full flex justify-between items-center px-28  shadow-sm">
+
+        <span class="text-[18px]">
+            Portfolio
+        </span>
+
+        <span class="flex gap-x-4 font-light">
+
+            <a href="#home" class="hover:underline cursor-pointer transition-all"> Accueil </a>
+
+            <a href="#skills" class="hover:underline cursor-pointer transition-all"> compétences </a>
+
+            <a href="#projects" class="hover:underline cursor-pointer transition-all"> Projets </a>
+
+            <a href="#contact" class="hover:underline cursor-pointer transition-all"> Contact </a>
+        </span>
+
+    </span>
+
+</div>
+
+
+<main class="w-full h-[calc(auto-60px)] p-5 bg-[#F8FAFC]">
+
+    <section class="w-full h-full flex flex-col gap-y-32">
+
+
+        <!-- home -->
+
+        <div class="w-full flex justify-around items-center" id="home">
+
+            <!-- information -->
+            <span class="flex flex-col gap-y-5 mt-8">
+
+                <span class="text-[40px] font-bold"> Mouhsine Ibrahim </span>
+
+                <span class="flex max-w-[600px] w-auto">
+                    Je suis un développeur web en début de carrière, passionné par la
+                    création d'applications et de sites web dynamiques et fonctionnels.
+                    Je maîtrise à la fois le développement frontend et backend, ce qui me
+                    permet de prendre en charge l'ensemble du cycle de vie d'un projet.
+                    Je suis à la recherche d'un stage ou d'une opportunité
+                    professionnelle dans le domaine du développement web pour
+                    approfondir mes compétences techniques, améliorer mes
+                    connaissances en gestion de projets, et contribuer à des solutions
+                    innovantes
+                </span>
+
+                <button mat-raised-button class="!bg-gray-800 !text-white !w-[140px]">
+
+                    <a href="cv.pdf"> download cv </a>
+
+                </button>
+
+            </span>
+
+            <!-- image -->
+            <span class="max-w-[400px] max-h-[300px]">
+
+                <img src="dev.png" alt="" class="w-full h-full object-contain">
+
+            </span>
+
+        </div>
+
+
+        <!-- skills -->
+
+        <div class="w-full flex flex-col gap-y-10" id="skills">
+
+            <span class="flex justify-center">
+                <span class="text-[30px] font-bold"> Compétences </span>
+            </span>
+
+
+            <marquee scrollAmount="4">
+
+                <span class="flex gap-x-40">
+
+                    @for (item of images(); track $index) {
+
+                    <img [src]="item" class="w-[60px] h-[60px] object-contain">
+                    }
+
+                </span>
+
+            </marquee>
+
+        </div>
+
+
+        <!-- projiect -->
+
+        <div class="flex flex-col gap-y-10" id="projects">
+
+
+            <span class="flex justify-center">
+                <span class="text-[30px] font-bold"> Projets </span>
+            </span>
+
+
+            <div class="w-full h-full flex gap-x-10 justify-center flex-wrap">
+
+                @for (item of projectsImg(); track $index) {
+
+
+                <span class="flex w-[400px] h-auto  shadow-lg rounded-md p-3 cursor-pointer border border-solid border-gray-300">
+                    <a [href]="item.url" target="_blank" class="h-auto flex flex-col gap-y-3">
+
+                        <img [src]="item.image" alt="" class="w-full h-full object-contain">
+
+
+                        <span> {{item.title}} </span>
+                    </a>
+
+                </span>
+
+                }
+
+
+            </div>
+
+        </div>
+
+
+        <!-- contact -->
+
+        <div class="flex flex-col gap-y-10" id="contact">
+
+            <span class="flex justify-center">
+                <span class="text-[30px] font-bold"> Contact </span>
+            </span>
+
+
+            <span class="w-full flex justify-center">
+
+                <span class="w-[500px] h-auto flex flex-col gap-y-5">
+
+                    <span class="flex">
+                        <input type="text" class="w-full outline-none border border-solid border-gray-200 px-2 py-1"
+                            placeholder="name">
+                    </span>
+
+                    <span>
+                        <input type="text" class="w-full outline-none border border-solid border-gray-200 px-2 py-1"
+                            placeholder="email">
+                    </span>
+
+
+                    <span>
+                        <textarea type="text" class="w-full outline-none border border-solid border-gray-200 px-2 py-1"
+                            placeholder="message">
+
+                        </textarea>
+                    </span>
+
+
+                    <span>
+                        <button mat-raised-button class="!bg-gray-800 !text-white !rounded-md"> send </button>
+                    </span>
+
+                </span>
+
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
