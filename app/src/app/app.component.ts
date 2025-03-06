@@ -16,7 +16,7 @@ export class AppComponent {
   title = 'app';
 
 
-  images = signal<string[]>(['html.png', 'css.png', 'js.png', 'ts.png', 'angular.png', 'node.png', 'mongo.png', 'git.png','socket.png'])
+  images = signal<string[]>(['html.png', 'css.png', 'tailwind.png' ,'js.png', 'ts.png', 'angular.png', 'node.png', 'mongo.png', 'git.png','socket.png'])
 
 
   projectsImg = signal<any[]>([
