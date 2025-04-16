@@ -15,8 +15,51 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 export class AppComponent {
   title = 'app';
 
+  frontSkills = signal<any[]>([
+    {
+      name: 'HTML5', logo: 'html.png'
+    },
+    {
+      name: 'CSS3', logo: 'css.png'
+    },
+    {
+      name: 'TAILWIND CSS', logo: 'tailwind.png'
+    },
+    {
+      name: 'JAVASCRIPT', logo: 'js.png'
+    },
+    {
+      name: 'TYPESCRIPT', logo: 'ts.png'
+    },
+    {
+      name: 'ANGULAR', logo: 'angular.png'
+    }
+  ])
 
-  images = signal<string[]>(['html.png', 'css.png', 'tailwind.png' ,'js.png', 'ts.png', 'angular.png', 'node.png', 'mongo.png', 'git.png','socket.png'])
+
+  backendSkills = signal<any[]>([
+    {
+      name: 'NODE', logo: 'node.png'
+    },
+    {
+      name: 'EXPRESS', logo: 'express.png'
+    },
+    {
+      name: 'MONGO DB', logo: 'mongo.png'
+    },
+    {
+      name: 'MYSQL', logo: 'mysql.png'
+    },
+    {
+      name: 'POSTGRES', logo: 'postgres.png'
+    },
+    {
+      name: 'GIT', logo: 'git.png'
+    },
+    {
+      name: 'SOCKET.io', logo: 'socket.png'
+    }
+  ])
 
 
   projectsImg = signal<any[]>([

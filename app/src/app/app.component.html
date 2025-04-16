@@ -75,16 +75,40 @@
             </span>
 
 
-            <marquee scrollAmount="4">
+            <marquee scrollAmount="6" class="w-auto" direction="left">
 
-                <span class="flex gap-x-40">
+                <div class="w-full flex justify-evenly">
 
-                    @for (item of images(); track $index) {
+                    @for (item of frontSkills(); track $index) {
 
-                    <img [src]="item" class="w-[60px] h-[60px] object-contain">
+                    <div class="max-w-[120px] w-full max-h-[140px] h-full flex flex-col justify-center items-center py-3 border border-solid border-gray-300 rounded-lg shadow-lg">
+                        <img [src]="item.logo" class="w-[60px] h-[60px] object-contain">
+
+                        <span class="text-gray-900"> {{item.name}} </span>
+                    </div>
                     }
 
-                </span>
+                </div>
+
+            </marquee>
+
+
+
+            
+            <marquee scrollAmount="6" direction="right">
+
+                <div class="w-full flex justify-evenly">
+
+                    @for (item of backendSkills(); track $index) {
+
+                    <div class="max-w-[120px] w-full max-h-[140px] h-full flex flex-col justify-center items-center py-3 border border-solid border-gray-300 rounded-lg shadow-lg">
+                        <img [src]="item.logo" class="w-[60px] h-[60px] object-contain">
+
+                        <span> {{item.name}} </span>
+                    </div>
+                    }
+
+                </div>
 
             </marquee>
 
