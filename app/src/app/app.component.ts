@@ -64,8 +64,8 @@ export class AppComponent {
 
   projectsImg = signal<any[]>([
 
-    {image: 'chat.JPG', url: 'https://chat-app-client-op0f.onrender.com/login', title: "application de chat utilisant angular node express js mongo db socket io"},
-     {image: 'blog.JPG', url: 'https://blog-app-client-0eix.onrender.com/sign_in', title: 'application de blog utilisant Angular Node Express JS Mongo DB'}
+    {image: 'chat.JPG', url: 'https://chat-app-view.vercel.app/', title: "application de chat utilisant angular node express js mongo db socket io"},
+     {image: 'blog.JPG', url: 'https://blog-app-view.vercel.app/', title: 'application de blog utilisant Angular Node Express JS Mongo DB'}
 
   ])
 }
